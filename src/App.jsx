@@ -1,12 +1,8 @@
-import React from 'react'
 import './App.css'
 import FunctionalComponent from './components/FunctionalComponent'
+import ClassComponent from './components/ClassComponent'
 
-class ClassComponent extends React.Component{
-  render () {
-    return <div>Ini Kelas Componenet</div>
-  }
-}
+
 
 function App() {
 
@@ -15,7 +11,6 @@ function App() {
       Hello World!
       <FunctionalComponent />
       <FunctionalComponent />
-      <FunctionalComponent />  
       <ClassComponent />
     </>
   )

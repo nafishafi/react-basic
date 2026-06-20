@@ -10,10 +10,15 @@ class ClassComponent extends React.Component{
     }
 
     this.addNumber = this.addNumber.bind(this)
+    this.handleChangeInput = this.handleChangeInput.bind(this)
   }
 
   addNumber(number){
     this.setState((prevState=>({count:prevState.count + number})))
+  }
+
+  handleChangeInput(e){
+    this.setState({input: e.target.value})
   }
 
   render () {
@@ -25,9 +30,7 @@ class ClassComponent extends React.Component{
         <input 
             type="text" 
             value={this.state.input}
-            onChange={(e)=>{
-                this.setState({input: e.target.value})
-            }}
+            onChange={this.handleChangeInput}
         />
         <p>Yang ditulisakan: {this.state.input}</p>
             
